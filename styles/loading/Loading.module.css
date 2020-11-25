@@ -1,0 +1,48 @@
+/** @format */
+.container {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f1e5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-family: "Anton";
+  font-size: 25px;
+}
+
+.container * {
+  margin: 0px;
+}
+
+.container h1::after {
+  content: ".";
+  -webkit-animation: anime 2s infinite;
+          animation: anime 2s infinite;
+}
+
+@-webkit-keyframes anime {
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+}
+
+@keyframes anime {
+  33% {
+    content: "..";
+  }
+  66% {
+    content: "...";
+  }
+}
+/*# sourceMappingURL=Loading.module.css.map */

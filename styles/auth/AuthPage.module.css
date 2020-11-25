@@ -1,0 +1,123 @@
+/** @format */
+.container {
+  min-height: 100vh;
+  width: 100vw;
+  background: url("/images/bg-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .card {
+  width: 350px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  padding: 0px;
+}
+
+.container .card .head {
+  padding: 30px;
+  text-align: center;
+  color: #2d2d2d;
+  background-color: #efefef;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.container .card .head * {
+  margin: 0px;
+  font-family: Bahnschrift;
+}
+
+.container .card .head p {
+  font-size: 18px;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+}
+
+.container .card .head h1 {
+  font-size: 35px;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+}
+
+.container .card .body {
+  padding: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .card .body form {
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+}
+
+.container .card .body * {
+  margin: 0px;
+  font-family: Bahnschrift;
+}
+
+.container .card .body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .card .body div input {
+  padding: 9px;
+  font-size: 17px;
+  outline-style: none;
+  border-radius: 4px;
+  border: 1px solid #707070;
+  margin-bottom: 20px;
+}
+
+.container .card .body div button {
+  background-color: #426e86;
+  color: white;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 0px;
+  outline: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container .card .body div a {
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .container .card {
+    width: 90vw;
+  }
+}
+/*# sourceMappingURL=AuthPage.module.css.map */

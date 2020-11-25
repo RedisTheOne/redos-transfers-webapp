@@ -1,0 +1,64 @@
+/** @format */
+.container {
+  margin-top: 30px;
+  width: 100%;
+  background-color: white;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.container .header {
+  background-color: #426e86;
+  color: white;
+  text-align: center;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  padding: 12px;
+}
+
+.container .header p {
+  font-size: 25px;
+  font-family: Bahnschrift;
+}
+
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.container table th,
+.container table td {
+  text-align: left;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.container table .border_right {
+  border-right: 1px solid #3e3e3e3e;
+}
+
+.container table td {
+  font-size: 16px;
+  width: 50%;
+  border-bottom: 1px solid #3e3e3e3e;
+}
+
+.container table th {
+  background-color: #f0810f;
+  color: white;
+  width: 50%;
+}
+
+.container .no_transfers {
+  background-color: #f0810f;
+  padding: 10px;
+  color: white;
+}
+
+.container .no_transfers p {
+  font-size: 20px;
+  font-weight: bold;
+}
+/*# sourceMappingURL=Transfers.module.css.map */

@@ -1,0 +1,75 @@
+/** @format */
+.container {
+  -webkit-transition: 0.2s opacity;
+  transition: 0.2s opacity;
+  width: 400px;
+  border-radius: 6px;
+  background-color: white;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: fixed;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .close_div {
+  text-align: right;
+  margin: 15px;
+}
+
+.container .close_div i {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.container .notifications {
+  margin: 15px;
+  margin-top: 0px;
+  max-height: 50vh;
+  overflow-y: auto;
+}
+
+.container .notifications .notification {
+  border: 1px solid #3e3e3e3e;
+  margin: 8px;
+  border-radius: 5px;
+}
+
+.container .notifications .notification p {
+  margin: 0px;
+  font-size: 18px;
+  padding: 4px;
+}
+
+.container .notifications .notification .date {
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #426e86;
+  padding: 4px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  color: white;
+}
+
+.container .notifications .notification .no_notifications {
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 80vw;
+  }
+}
+/*# sourceMappingURL=Notifications.module.css.map */

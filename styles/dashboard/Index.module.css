@@ -1,0 +1,220 @@
+/** @format */
+.dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  -webkit-transition: 0.2s -webkit-filter;
+  transition: 0.2s -webkit-filter;
+  transition: 0.2s filter;
+  transition: 0.2s filter, 0.2s -webkit-filter;
+}
+
+.dashboard * {
+  margin: 0px;
+}
+
+.dashboard .side_bar {
+  z-index: 999;
+  -webkit-transition: 0.5s margin-left;
+  transition: 0.5s margin-left;
+  overflow-y: auto;
+  width: 270px;
+  text-align: center;
+  background-color: #426e86;
+  color: white;
+  padding: 25px;
+}
+
+.dashboard .side_bar * {
+  margin: 0px;
+}
+
+.dashboard .side_bar h1 {
+  text-align: center;
+}
+
+.dashboard .side_bar .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.dashboard .side_bar .options div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #f0810f;
+  cursor: pointer;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.dashboard .side_bar .options div i {
+  font-size: 20px;
+  margin-top: 10px;
+  width: 30px;
+  text-align: left;
+}
+
+.dashboard .side_bar .options div p {
+  font-family: "Anton";
+  font-weight: 100;
+  font-size: 25px;
+}
+
+.dashboard .container {
+  background-color: #f8f1e5;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.dashboard .container .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .container .header h1 {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  font-family: Bahnschrift;
+}
+
+.dashboard .container .header .notification_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.dashboard .container .header .notification_container .username {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: 10px;
+}
+
+.dashboard .container .header .notification_container .username label {
+  font-size: 18px;
+  font-family: Bahnschrift;
+}
+
+.dashboard .container .header .notification_container .notification {
+  cursor: pointer;
+}
+
+.dashboard .container .header .notification_container .notification .unread_notifications {
+  position: absolute;
+  background-color: #f0810f;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  margin-top: -15px;
+  margin-left: 26px;
+  font-weight: bold;
+  border-radius: 100%;
+}
+
+.dashboard .container .header .notification_container i {
+  font-size: 40px;
+}
+
+.dashboard .menu_options {
+  bottom: 10px;
+  right: 10px;
+  padding: 15px;
+  background-color: #426e86;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  position: fixed;
+}
+
+.dashboard .menu_options i {
+  font-size: 30px;
+}
+
+.dashboard form {
+  margin-top: 30px;
+}
+
+.dashboard form div {
+  margin-bottom: 12px;
+}
+
+.dashboard form select,
+.dashboard form input {
+  font-family: Bahnschrift;
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid #3e3e3e3e;
+}
+
+.dashboard form button {
+  background-color: #426e86;
+  color: white;
+  padding: 8px;
+  font-size: 20px;
+  border: 0px;
+  border-radius: 6px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-weight: bold;
+  font-family: Bahnschrift;
+  outline: none;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .dashboard .side_bar {
+    position: fixed;
+    height: 100vh;
+    margin-left: -270px;
+  }
+}
+
+@media (max-width: 400px) {
+  .dashboard .container .header h1 {
+    display: none;
+  }
+  .dashboard .container .header {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+/*# sourceMappingURL=Index.module.css.map */
