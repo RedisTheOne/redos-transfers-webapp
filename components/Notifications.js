@@ -22,7 +22,7 @@ export default function Notifications({ opacity, closeNotifications, display, no
                     const time = new Date(n.time)
                     return (
                         <div key={i} className={style.notification}>
-                            <p className={style.date}>{time.getDate() + "/" + (parseInt(time.getMonth()) + 1).toString() + "/" + time.getFullYear() + " " + time.getHours() + ":" + time.getMinutes()}</p>
+                            <p className={style.date}>{time.getDate() + "/" + (parseInt(time.getMonth()) + 1).toString() + "/" + time.getFullYear() + " " + time.getHours() + ":" + (time.getMinutes() > 9 ? time.getMinutes() : "0" + time.getMinutes())}</p>
                             <p>{n.msg}</p>
                         </div>
                     )

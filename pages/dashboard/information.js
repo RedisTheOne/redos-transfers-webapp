@@ -15,7 +15,7 @@ export default function Information() {
 
     //CHECK IF USER IS FETCHED OR NOT
     useEffect(() => {
-        if(!user.isFetched && data.user) {
+        if(!user.isFetched) {
             fetch(`${API_URL}/users`, {
                 headers: {
                     'Authorization': `Bearer ${localStorage.getItem('TOKEN')}`
@@ -23,7 +23,7 @@ export default function Information() {
             })
                 .then(res => res.json())
                 .then(data => {
-                    if(data.status) {
+                    if(data.status && data.user) {
                         let i = 0
                         const users = []
                         data.notifications.forEach(n => {
