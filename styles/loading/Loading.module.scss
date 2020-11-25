@@ -1,0 +1,31 @@
+/** @format */
+
+$background: #f8f1e5;
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: $background;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: "Anton";
+    font-size: 25px;
+    * {
+        margin: 0px;
+    }
+    h1::after {
+        content: ".";
+        animation: anime 2s infinite;
+    }
+}
+
+@keyframes anime {
+    33% {
+        content: "..";
+    }
+    66% {
+        content: "...";
+    }
+}

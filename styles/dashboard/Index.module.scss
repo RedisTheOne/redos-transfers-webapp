@@ -1,0 +1,164 @@
+/** @format */
+
+$background: #f8f1e5;
+$sidebarBg: #426e86;
+
+.dashboard {
+    display: flex;
+    min-width: 100vw;
+    min-height: 100vh;
+    transition: 0.2s filter;
+    * {
+        margin: 0px;
+    }
+    .side_bar {
+        z-index: 999;
+        transition: 0.5s margin-left;
+        overflow-y: auto;
+        width: 270px;
+        text-align: center;
+        background-color: $sidebarBg;
+        color: white;
+        padding: 25px;
+        * {
+            margin: 0px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .options {
+            display: flex;
+            margin-top: 20px;
+            flex-direction: column;
+            div {
+                display: flex;
+                background-color: #f0810f;
+                cursor: pointer;
+                border-radius: 6px;
+                padding: 10px;
+                margin-bottom: 15px;
+                i {
+                    font-size: 20px;
+                    margin-top: 10px;
+                    width: 30px;
+                    text-align: left;
+                }
+                p {
+                    font-family: "Anton";
+                    font-weight: 100;
+                    font-size: 25px;
+                }
+            }
+        }
+    }
+    .container {
+        background-color: $background;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        flex: 1;
+        .header {
+            display: flex;
+            h1 {
+                flex: 1;
+                font-family: Bahnschrift;
+            }
+            .notification_container {
+                display: flex;
+                .username {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    margin-left: 10px;
+                    label {
+                        font-size: 18px;
+                        font-family: Bahnschrift;
+                    }
+                }
+                .notification {
+                    cursor: pointer;
+                    .unread_notifications {
+                        position: absolute;
+                        background-color: #f0810f;
+                        width: 25px;
+                        height: 25px;
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        color: white;
+                        margin-top: -15px;
+                        margin-left: 26px;
+                        font-weight: bold;
+                        border-radius: 100%;
+                    }
+                }
+                i {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+    .menu_options {
+        bottom: 10px;
+        right: 10px;
+        padding: 15px;
+        background-color: #426e86;
+        color: white;
+        border-radius: 6px;
+        cursor: pointer;
+        position: fixed;
+        i {
+            font-size: 30px;
+        }
+    }
+
+    form {
+        margin-top: 30px;
+        div {
+            margin-bottom: 12px;
+        }
+        select,
+        input {
+            font-family: Bahnschrift;
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            font-size: 20px;
+            outline: none;
+            border: 1px solid #3e3e3e3e;
+        }
+        button {
+            background-color: #426e86;
+            color: white;
+            padding: 8px;
+            font-size: 20px;
+            border: 0px;
+            border-radius: 6px;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-weight: bold;
+            font-family: Bahnschrift;
+            outline: none;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 950px) {
+    .dashboard .side_bar {
+        position: fixed;
+        height: 100vh;
+        margin-left: -270px;
+    }
+}
+
+@media (max-width: 400px) {
+    .dashboard .container .header h1 {
+        display: none;
+    }
+    .dashboard .container .header {
+        justify-content: flex-end;
+    }
+}

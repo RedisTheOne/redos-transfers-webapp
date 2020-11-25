@@ -1,0 +1,54 @@
+/** @format */
+
+.container {
+    margin-top: 30px;
+    width: 100%;
+    background-color: white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    .header {
+        background-color: #426e86;
+        color: white;
+        text-align: center;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        padding: 12px;
+        p {
+            font-size: 25px;
+            font-family: Bahnschrift;
+        }
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        th,
+        td {
+            text-align: left;
+            padding: 10px;
+            font-size: 20px;
+        }
+        .border_right {
+            border-right: 1px solid #3e3e3e3e;
+        }
+        td {
+            font-size: 16px;
+            width: 50%;
+            border-bottom: 1px solid #3e3e3e3e;
+        }
+        th {
+            background-color: #f0810f;
+            color: white;
+            width: 50%;
+        }
+    }
+    .no_transfers {
+        background-color: #f0810f;
+        padding: 10px;
+        color: white;
+        p {
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}
