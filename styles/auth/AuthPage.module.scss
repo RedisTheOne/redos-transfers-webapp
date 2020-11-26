@@ -60,7 +60,8 @@ $btnBackgroundColor: #426e86;
             div {
                 display: flex;
                 flex-direction: column;
-                input {
+                input,
+                .options {
                     padding: 9px;
                     font-size: 17px;
                     outline-style: none;

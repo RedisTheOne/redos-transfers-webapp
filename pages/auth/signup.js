@@ -11,7 +11,6 @@ export default function SignUp({ usersList }) {
     const router = useRouter()
     const [username, setUsername] = useState('')
     const [email, setEmail] = useState('')
-    const [region, setRegion] = useState('')
     const [number, setNumber] = useState('')
     const [password, setPassword] = useState('')
     const [confirmPassword, setConfirmPassword] = useState('')
@@ -70,7 +69,7 @@ export default function SignUp({ usersList }) {
     const secondFormSubmit = (e) => {
         e.preventDefault()
         const phoneRegex = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/
-        if(/\S/.test(region) && /\S/.test(number)) {
+        if(/\S/.test(number)) {
             if(phoneRegex.test(number)) {
                 setSecondFormProperties({display: 'block', opacity: 0})
                 setTimeout(() => {
@@ -103,7 +102,7 @@ export default function SignUp({ usersList }) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({username, password, phone_number: number, email, region})
+            body: JSON.stringify({username, password, phone_number: number, email, region: document.getElementById('regionInput').value})
         })
             .then(res => res.json())
             .then(data => {
@@ -179,7 +178,14 @@ export default function SignUp({ usersList }) {
                         </form>
                         <form style={{opacity: secondFormProperties.opacity, display: secondFormProperties.display}} onSubmit={secondFormSubmit} >
                             <div>
-                                <input value={region} onChange={(e) => setRegion(e.target.value)} placeholder="Region:" type="text" />
+                                <select id="regionInput" className={styles.options}>
+                                    <option value="Europe Nordic & East">Europe Nordic & East</option>
+                                    <option value="Europe West">Europe West</option>
+                                    <option value="Brazil">Brazil</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="Turkey">Turkey</option>
+                                    <option value="Japan">Japan</option>
+                                </select>
                             </div>
                             <div>
                                 <input value={number} onChange={(e) => setNumber(e.target.value)} placeholder="Number:" type="text" />

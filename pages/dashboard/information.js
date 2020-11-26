@@ -79,7 +79,7 @@ export default function Information() {
                             <p>Username: {user.username}</p>
                         </div>
                         <div className={informationStyle.information}>
-                            <p>Region: {user.region}</p>
+                            <p>Email: {user.email}</p>
                         </div>
                         <div className={informationStyle.information}>
                             <p>Phone Number: {user.phoneNumber}</p>

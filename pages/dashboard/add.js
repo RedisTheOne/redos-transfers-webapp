@@ -84,13 +84,13 @@ export default function Add() {
                 body: JSON.stringify({ reciever_id: document.getElementById('userSelect').value, quantity: document.getElementById('quantityInput').value })
             })
                 .then(res => res.json())
-                .then(() => {
+                .then((data) => {
                     showToast('Transfer was sent successfully')
                     //EDIT CONTEXT
                     setUser({
                         ...user, 
                         sentTransfers: [...user.sentTransfers, { reciever_id: document.getElementById('userSelect').value, quantity: document.getElementById('quantityInput').value }],
-                        notifications: [{ time: Date.now(), msg: `${document.getElementById('quantityInput').value} credits transfer to ${findUser(document.getElementById('userSelect').value)} was done successfuly` }, ...user.notifications],
+                        notifications: [data.notification, ...user.notifications],
                         newNotifications: user.newNotifications + 1,
                         balance: user.balance - document.getElementById('quantityInput').value
                     })

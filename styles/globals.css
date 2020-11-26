@@ -13,7 +13,7 @@ body {
 
 @font-face {
     font-family: Bahnschrift;
-    src: url(/fonts/BAHNSCHRIFT.ttf);
+    src: url(/fonts/BAHNSCHRIFT.woff);
 }
 
 a {
